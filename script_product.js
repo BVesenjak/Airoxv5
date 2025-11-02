@@ -590,6 +590,64 @@ function initHeroBuyImageSwitching() {
     });
 }
 
+// Initialize Hero Buy Thumbnail Gallery
+function initHeroBuyThumbnails() {
+    const heroBuyImage = document.getElementById('heroBuyImage');
+    const thumbnails = document.querySelectorAll('.thumb-buy');
+    const leftArrow = document.querySelector('.carousel-arrow--left');
+    const rightArrow = document.querySelector('.carousel-arrow--right');
+    
+    if (!heroBuyImage || !thumbnails.length) return;
+    
+    let currentIndex = 0;
+    
+    function updateActiveThumb(index) {
+        // Remove active from all thumbnails
+        thumbnails.forEach(t => t.classList.remove('thumb-buy--active'));
+        
+        // Set active on current thumbnail
+        thumbnails[index].classList.add('thumb-buy--active');
+        
+        // Update main image
+        const newImageSrc = thumbnails[index].dataset.image;
+        if (newImageSrc) {
+            // Fade out
+            heroBuyImage.style.opacity = '0';
+            
+            // Change image after fade
+            setTimeout(() => {
+                heroBuyImage.src = newImageSrc;
+                // Fade in
+                heroBuyImage.style.opacity = '1';
+            }, 300);
+        }
+        
+        currentIndex = index;
+    }
+    
+    // Thumbnail click handlers
+    thumbnails.forEach((thumb, index) => {
+        thumb.addEventListener('click', function() {
+            updateActiveThumb(index);
+        });
+    });
+    
+    // Arrow navigation
+    if (leftArrow) {
+        leftArrow.addEventListener('click', function() {
+            const newIndex = currentIndex > 0 ? currentIndex - 1 : thumbnails.length - 1;
+            updateActiveThumb(newIndex);
+        });
+    }
+    
+    if (rightArrow) {
+        rightArrow.addEventListener('click', function() {
+            const newIndex = currentIndex < thumbnails.length - 1 ? currentIndex + 1 : 0;
+            updateActiveThumb(newIndex);
+        });
+    }
+}
+
 // Initialize All
 function init() {
     // Variant & Cart
@@ -612,6 +670,7 @@ function init() {
     // New Features
     initButtonHoverAnimations();
     initHeroBuyImageSwitching();
+    initHeroBuyThumbnails();
     
     // Initial updates
     updatePriceDisplay();
