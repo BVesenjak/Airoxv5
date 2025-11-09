@@ -152,8 +152,9 @@ body.cursor-click .btn-cta *:hover {
     transform: translateX(-50%);
 }
 
+/*filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));*/
 .logo-flame {
-    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+    filter: drop-shadow(0 0 10px rgba(0, 200, 200, 0.8));
 }
 
 .logo-text {
@@ -1543,8 +1544,8 @@ p {
 .social-icons a {
     width: 40px;
     height: 40px;
-    background-color: var(--black);
-    color: var(--white);
+    background-color: var(--white);
+    color: var(--black);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -2150,6 +2151,37 @@ p {
     .footer-cta-content {
         flex-direction: column;
         text-align: center;
+    }
+    
+    /* === FOOTER MOBILE 2x2 GRID === */
+    .footer-section .row {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 2rem 1.5rem !important;
+        margin: 0 !important;
+    }
+    
+    .footer-section .col-lg-3 {
+        width: 100% !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+    }
+    
+    .footer-section h4 {
+        font-size: 14px !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .footer-links li {
+        margin-bottom: 8px !important;
+    }
+    
+    .footer-links a {
+        font-size: 12px !important;
+    }
+    
+    .footer-brand {
+        margin-top: 40px !important;
     }
     
     .video-card {
