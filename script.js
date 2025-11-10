@@ -85,7 +85,7 @@ function handleNavbarVisibility() {
     const currentScroll = window.pageYOffset;
     
     // No scroll = transparent navbar background
-    if (currentScroll === 0) {
+    if (currentScroll <= 50) {
         navbar.classList.add('transparent');
         navbar.classList.remove('visible-opaque', 'shrunk');
     }
