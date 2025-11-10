@@ -3815,6 +3815,15 @@ p {
     width: auto;
 }
 
+.cta-btn-double-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+}
+
 /* Mobile override for special BUY NOW button - MUST be last */
 @media (max-width: 767px) {
     .cta-btn-wrapper {
