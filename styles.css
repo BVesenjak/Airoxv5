@@ -605,13 +605,21 @@ p {
 
 .feature-list li {
     padding: 15px 0;
+    
+    position: relative;
+    
+}
+
+#productDetails.feature-list li {
+    padding: 15px 0;
     border-bottom: 1px solid var(--border-gray);
     position: relative;
     padding-left: 30px;
 }
 
 .feature-list li:before {
-    content: "✓";
+    content: "•";
+    font-family: Arial, sans-serif; 
     position: absolute;
     left: 0;
     color: var(--red);
@@ -2903,7 +2911,7 @@ p {
     font-size: 2rem;
     font-weight: 600;
     margin-bottom: 2rem;
-    color: var(--white);
+    color: cyan;
 }
 
 .feature-list {
@@ -2916,15 +2924,24 @@ p {
     padding-left: 1.5rem;
     position: relative;
     font-size: 0.875rem;
-    color: var(--light-gray);
+    color: rgb(227, 227, 227);
 }
 
 .feature-list li::before {
-    content: '✓';
+    content: none;
+    font-family: Arial, sans-serif; 
     position: absolute;
     left: 0;
-    color: cyan;
-    font-weight: 700;
+    color: rgb(25, 239, 239);
+    font-weight: 900;
+}
+
+#productDetails.feature-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: rgb(25, 239, 239);
+    font-weight: 900;
 }
 
 /* Spec Table */
@@ -2941,7 +2958,7 @@ p {
     font-size: 0.875rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: var(--light-gray);
+    color: rgb(227, 227, 227);
 }
 
 .spec-table th,
@@ -2953,11 +2970,11 @@ p {
 
 .spec-table th {
     font-weight: 600;
-    color: var(--white);
+    color: rgb(77, 77, 77);
 }
 
 .spec-table td {
-    color: var(--light-gray);
+    color: rgb(227, 227, 227);
 }
 
 .spec-table tr {
@@ -3012,7 +3029,7 @@ p {
 .whats-in-box__list li {
     padding: 4px 0;
     font-size: 0.875rem;
-    color: var(--light-gray);
+    color: rgb(77, 77, 77);
 }
 
 /* Link Subtle */

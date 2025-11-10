@@ -709,7 +709,8 @@ button {
 }
 
 .feature-list li::before {
-    content: '✓';
+    content: "•";
+    font-family: Arial, sans-serif; /* Fallback-Font */
     position: absolute;
     left: 0;
     color: var(--accent);

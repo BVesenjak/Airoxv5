@@ -15,9 +15,9 @@ const state = {
     quantity: 1,
     giftWrap: false,
     prices: {
-        solo: 79.99,
-        duo: 135.98, // 15% off
-        family: 239.97 // 25% off
+        solo: 39.99,
+        duo: 67.98, // 15% off
+        family: 87.97 // 45% off
     }
 };
 
