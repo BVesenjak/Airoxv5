@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Buy your health - Premium wellness products">
-    <title>Buy Your Health | WARCHARGE</title>
+    <title>Buy Your Focus | AIROX</title>
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -165,12 +165,41 @@
                         </div>
                     </div>
                     
-                    <!-- Custom Checkbox -->
+                    <!-- Custom Checkbox & ADD TO CART CTA-->
                     <label class="custom-checkbox">
                         <input type="checkbox" id="giftWrap">
                         <span class="custom-checkbox__box"></span>
                         <span class="custom-checkbox__label">Add gift wrap (+$5.00)</span>
+                        <button id="addToCart">Learn more</button>
+                        <div id="addtocart" class="cta-btn-wrapper">
+                            <button class="buy-cta" id="addToCart">
+                          <video class="btn-video btn-video-idle" muted playsinline style="opacity: 0;">
+                            <source src="assets/btn-bg-1.mp4" type="video/mp4">
+                          </video>
+                          <video class="btn-video btn-video-cart-hover" loop muted playsinline style="opacity: 0;">
+                            <source src="assets/btn-cart-hover.mp4" type="video/mp4">
+                          </video>
+                          <video class="btn-video btn-video-cart-active" muted playsinline style="opacity: 0;">
+                            <source src="assets/btn-cart-active.mp4" type="video/mp4">
+                          </video>
+                          <span class="btn-text" style="
+                          font-weight: 800;
+                          font-size: 62px;
+                          color: #ffffff;
+                          letter-spacing: 2px;
+                          text-shadow:
+                            2px 2px 6px rgba(255, 255, 255, 0.1),   /* soft shadow depth */
+                            0 0 8px rgba(255, 255, 255, 0.2); /* subtle warm glow fun */
+                          background: linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
+                          -webkit-background-clip: text;
+                          -webkit-text-fill-color: transparent;
+                          display: inline-block;
+                          text-transform: uppercase;
+                        ">add to cart</span>
+                        </button>
+                        </div>
                     </label>
+                    
                     
                     <!-- CTAs & Custom Checkbox -->
                     <div class="cta-group">
@@ -185,7 +214,6 @@
                                 <span class="btn-text">BUY NOW</span>
                             </button>
                         </div>
-                        <button class="btn btn--primary pill--animated" id="addToCart" data-analytics="add-to-cart" data-animation="assets/btn-anim-7.mp4">Learn more</button>
                         
                     </div>
                     
