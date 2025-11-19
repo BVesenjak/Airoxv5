@@ -2274,7 +2274,7 @@ p {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(26, 26, 26, 0.75) 0%, rgba(45, 45, 45, 0.75) 100%);
+    background: linear-gradient(135deg, rgba(40, 50, 70, 0.95) 0%, rgba(255, 210, 185, 0.95) 100%);
     z-index: 0;
 }
 
@@ -3775,7 +3775,7 @@ p {
   
   .cta-btn-wrapper button.buy-cta {
     position: relative !important;
-    border: 12px solid rgb(0, 200, 200) !important;
+    border: 15px solid rgb(255, 255, 255) !important;
     background: transparent !important;
     overflow: hidden !important;
     transition: border-color 0.05s, background-color 0.05s !important;
@@ -3840,7 +3840,7 @@ p {
   .cta-btn-wrapper button.buy-cta:hover {
     border: 10px;
     border-color: rgb(255, 255, 255) !important;
-    box-shadow: 0 0 20px rgba(192, 247, 255, 0.4) !important;
+    box-shadow: none !important;
   }
   
   .cta-btn-wrapper button.buy-cta:hover .btn-video-default {
@@ -3854,7 +3854,7 @@ p {
   .cta-btn-wrapper button.buy-cta:active,
   .cta-btn-wrapper button.buy-cta:active:hover {
     background-color: rgb(0, 0, 0) !important;
-    border-color: rgb(0, 70, 70) !important;
+    border-color: rgb(0, 149, 160) !important;
     box-shadow: none !important;
   }
   
@@ -3899,6 +3899,10 @@ p {
     margin: 0 auto;
 }
 
+#addtocart.cta-btn-wrapper {
+    margin-bottom:20px;
+}
+
 /* Mobile override for special BUY NOW button - MUST be last */
 @media (max-width: 767px) {
     .cta-btn-wrapper {
@@ -3907,7 +3911,7 @@ p {
     }
     
     .cta-btn-wrapper button.buy-cta {
-        padding: 0.5rem 3rem !important;
+        padding: 0.9rem 3rem !important;
         max-width: 100% !important;
         width: 100% !important;
         box-sizing: border-box !important;
@@ -3922,9 +3926,9 @@ p {
             50% 100%,
             0% 80%
         ) !important;
-        border-width: 8px !important;
+        border-width: 17px !important;
         border-style: solid !important;
-        border-color: rgb(23, 69, 69) !important;
+        border-color: rgb(255, 255, 255) !important;
     }
     
     .cta-btn-wrapper button.buy-cta .btn-text {
@@ -3943,14 +3947,16 @@ p {
     }
     
     .cta-btn-wrapper button.buy-cta:hover {
+        background-color: rgb(0, 0, 0) !important;
+        box-shadow: none !important;
         border-color: rgb(255, 255, 255) !important;
-        box-shadow: 0 0 20px rgba(192, 247, 255, 0.4) !important;
     }
     
     .cta-btn-wrapper button.buy-cta:active,
     .cta-btn-wrapper button.buy-cta:active:hover {
-        background-color: rgb(0, 0, 0) !important;
-        border-color: rgb(0, 70, 70) !important;
+        border-color: rgb(0, 149, 160) !important;
+        /*border-color: rgb(0, 70, 70) !important;*/
+        border-color: none !important;
         box-shadow: none !important;
     }
 }
@@ -4045,7 +4051,7 @@ transition: opacity 0s ease !important;
     border-image: linear-gradient(to bottom, rgb(230, 235, 240), rgb(140, 150, 160)) 1 !important;
   box-shadow: none !important;
 }
-/*SOME MEDIA QUERY*/
+/*SOME MEDIA QUERY
 @media (hover: none) {
     .cta-btn-wrapper button.buy-cta:hover {
       border-color: rgb(0, 200, 200) !important;
@@ -4065,3 +4071,4 @@ transition: opacity 0s ease !important;
       box-shadow: none !important;
     }
   }
+    */
